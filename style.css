@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+/* font-family: "Outfit", sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height:100%;
+  /* background-image: url(IMG_4097.JPG); */
+  background-size: cover;
+  /* 画像が要素にぴったり合うように調整 */
+  background-position: center;
+  /* 画像を中央に配置 */
+  background-repeat: no-repeat;
+  /* 画像が繰り返し表示されないように */
+}
+
+body {
+  background: #222;
+  width: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  padding-top: 150px;
+  font-weight: normal;
+  font-size: 28px;
+  color: white;
+  font-family: "Outfit", sans-serif;
+}
+
+#songImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 12px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+audio {
+  cursor: pointer;
+  display: none;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* バー */
+div.timeMeasure {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 16px auto;
+}
+
+#bar {
+  width: 250px;
+  height: 6px;
+  accent-color: pink;
+}
+
+#bar:hover {
+  accent-color: rgb(234, 98, 121);
+  border: solid 10px rgb(234, 98, 121);
+}
+
+#bar:active {
+  accent-color: rgb(237, 59, 89);
+  border: solid 10px rgb(237, 59, 89);
+}
+
+/* 残り時間の表示 */
+#restTime {
+  color: white;
+}
+
+div.buttons {
+  width: 300px;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+/* << >> ボタン */
+#prev,
+#next {
+  font-size: 40px;
+  color: white;
+}
+
+#prev:hover,
+#next:hover {
+  color: #bbb;
+}
+
+#prev:active,
+#next:active {
+  color: #666
+}
+
+/* 再生,停止ボタン */
+#play,
+#stop {
+  font-family: "Outfit", sans-serif;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  line-height: 60px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #222;
+}
+
+#play:hover,
+#stop:hover {
+  background: #bbb;
+}
+
+#play:active,
+#stop:active {
+  background: #666;
+}
+
+span {
+  color: white;
+}
+
+/* プレイリスト */
+#playlist {
+  position: fixed;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  margin-left: 20px;
+  top: 40px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 8px;
+}
+
+li {
+  margin-top: 8px;
+}
+
+/* メニュー */
+#menu {
+  position: fixed;
+  top: 300px;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+#volume {
+  margin-top: 20px;
+  height: 6px;
+  width: 120px;
+  accent-color: #aaa;
+}
+
+#menu li {
+  margin-top: 12px;
+  font-size: 20px;
+}
+
+/* メディアクエリー */
+@media(min-width:1200px) {
+  #playlist {
+    left: 180px;
+  }
+
+  #menu {
+    left: 180px;
+  }
+}
+
+/* jsで扱うclass */
+.highlightgreen {
+  color: greenyellow;
+}
+
+.highlightblue {
+  color: aquamarine;
+}
+
+.appear {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
